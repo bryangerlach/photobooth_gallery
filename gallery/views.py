@@ -14,4 +14,4 @@ def image_gallery(request):
     else:
         print(f"Error: Local image directory not found: {local_image_path}")
 
-    return render(request, 'gallery/image_gallery.html', {'image_urls': image_urls})
+    return render(request, 'image_gallery.html', {'image_urls': image_urls})
