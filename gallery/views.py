@@ -9,7 +9,7 @@ def image_gallery(request):
     if os.path.isdir(local_image_path):
         for filename in os.listdir(local_image_path):
             if filename.lower().endswith(('.jpg', '.jpeg', '.png', '.gif')):
-                image_url = f"{settings.STATIC_URL}photobooth_images/{filename}"
+                image_url = f"{settings.STATIC_URL}{filename}"
                 image_urls.append(image_url)
     else:
         print(f"Error: Local image directory not found: {local_image_path}")
