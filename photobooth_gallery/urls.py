@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from gallery.views import image_gallery
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('gallery/', image_gallery, name='image_gallery'),
+    path('', image_gallery, name='home'), # Make the gallery the homepage
 ]
