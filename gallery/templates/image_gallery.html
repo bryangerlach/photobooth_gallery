@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photobooth Gallery</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery-container img {
+            width: 150px;
+            height: auto;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px #888888;
+            margin-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Photobooth Image Gallery</h1>
+
+    <div class="gallery-container">
+        {% if image_urls %}
+            {% for url in image_urls %}
+                <img src="{{ url }}" alt="Photobooth Image">
+            {% endfor %}
+        {% else %}
+            <p class="error">No images found in the photobooth directory.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
