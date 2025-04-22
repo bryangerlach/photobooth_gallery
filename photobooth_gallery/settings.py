@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-7(0z&tn!mjd*#_ww#vf1ag(juq!7uc1us2=0we6qzr@ht#a5e=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 LOCAL_IMAGE_DIRECTORY = '/root/photobooth/individuals'
 
